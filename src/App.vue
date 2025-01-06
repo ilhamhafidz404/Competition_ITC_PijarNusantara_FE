@@ -1,3 +1,14 @@
 <template>
-  <h1 class="text-3xl font-bold underline">Hello world!</h1>
+  <div>
+    <Navigation />
+  </div>
 </template>
+<script>
+import Navigation from "./components/Navigation.vue";
+export default {
+  name: "App",
+  components: {
+    Navigation,
+  },
+};
+</script>
