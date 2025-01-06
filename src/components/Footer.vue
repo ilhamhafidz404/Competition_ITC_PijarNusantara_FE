@@ -9,7 +9,7 @@
         </h1>
         <p>
           Jelajahi bakat mengajar Anda <br />
-          dan ciptakan dampak nyata <br />
+          dan ciptakan dampak nyata<br />
           bagi pendidikan Nusantara.
         </p>
         <div class="flex items-center gap-3 mt-5">
