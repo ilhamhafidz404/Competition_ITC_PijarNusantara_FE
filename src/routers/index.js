@@ -1,10 +1,10 @@
-import { createMemoryHistory, createRouter } from "vue-router";
+import { createWebHistory, createRouter } from "vue-router";
 
 import Detail from "../views/Detail_Program.vue";
 import Home from "../views/Home.vue";
 
 const router = createRouter({
-  history: createMemoryHistory(),
+  history: createWebHistory(),
   routes: [
     {
       path: "/",

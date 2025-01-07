@@ -2,7 +2,7 @@
   <div>
     <Navigation />
     <main>
-      <RouterView />
+      <router-view></router-view>
     </main>
     <Footer />
   </div>
