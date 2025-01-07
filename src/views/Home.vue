@@ -31,8 +31,6 @@
             </button>
           </div>
         </div>
-
-        <!-- Bagian Gambar -->
         <div class="md:w-1/2">
           <div class="relative w-full flex justify-center md:justify-end">
             <img
@@ -76,16 +74,16 @@
   <section>
     <div class="bg-white py-10">
       <div
-        class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-8 md:px-16"
+        class="container mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 px-8 md:px-16"
       >
-        <div>
+        <div class="w-full mx-auto">
           <img
             src="./../assets/image/relawan_1.png"
             alt="Relawan Mengajar"
-            class="w-full h-auto shadow-lg mx-auto"
+            class="rounded-lg lg:w-full w-1/2 h-auto shadow-lg mx-auto"
           />
         </div>
-        <div class="col-span-2">
+        <div class="lg:col-span-2">
           <div class="mb-10 pt-10">
             <h4
               class="text-4xl text-[#FFAC00] font-semibold font-sekunder italic"
@@ -107,7 +105,7 @@
             <ul class="mt-2 space-y-4">
               <li class="flex items-center">
                 <div
-                  class="bg-[#FFAC00] text-white font-bold w-10 h-10 flex items-center justify-center rounded-lg mr-4"
+                  class="bg-[#FFAC00] text-white font-bold min-w-10 h-10 flex items-center justify-center rounded-lg mr-4"
                 >
                   1
                 </div>
@@ -118,7 +116,7 @@
               </li>
               <li class="flex items-center">
                 <div
-                  class="bg-[#FFAC00] text-white font-bold w-9 h-10 flex items-center justify-center rounded-lg mr-4"
+                  class="bg-[#FFAC00] text-white font-bold min-w-10 h-10 flex items-center justify-center rounded-lg mr-4"
                 >
                   2
                 </div>
@@ -129,7 +127,7 @@
               </li>
               <li class="flex items-center">
                 <div
-                  class="bg-[#FFAC00] text-white font-bold w-11 h-10 flex items-center justify-center rounded-lg mr-4"
+                  class="bg-[#FFAC00] text-white font-bold min-w-10 h-10 flex items-center justify-center rounded-lg mr-4"
                 >
                   3
                 </div>
@@ -147,65 +145,67 @@
 
   <section>
     <div class="bg-white py-10">
-      <div class="container mx-auto px-6 md:px-16">
+      <div class="container mx-auto px-6 md:mb-16">
         <h2 class="text-4xl font-bold text-gray-900 mb-12 text-start">
           Temukan <span class="text-[#FFAC00]">Program</span> Yang <br />
           Tepat <span class="text-red-500">Untukmu</span>
         </h2>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 rounded-[15px]">
+        <div
+          class="grid grid-cols-1 md:grid-cols-3 lg:gap-10 md:gap-5 rounded-[15px]"
+        >
           <div
-            class="border border-[#FFAC00] rounded-[15px] overflow-hidden shadow-lg flex flex-col min-h-[400px]"
+            class="border border-[#FFAC00] rounded-[15px] overflow-hidden shadow-lg flex flex-col"
           >
             <img
               src="./../assets/image/program.png"
               alt="Program Relawan"
               class="w-full h-50 object-cover"
             />
-            <div class="p-6 flex flex-col justify-between flex-grow">
+            <div class="lg:p-6 md:p-3 flex flex-col">
               <h3 class="text-xl font-semibold mb-4">
                 Pendaftaran Relawan Jendela Jakarta
               </h3>
               <button
-                class="border border-[#FFAC00] text-[#FFAC00] px-4 py-2 rounded-[15px] font-bold hover:bg-[#FFAC00] hover:text-white transition duration-300 self-start"
+                class="border border-[#FFAC00] text-[#FFAC00] px-4 py-2 rounded-lg font-bold hover:bg-[#FFAC00] hover:text-white transition duration-300 self-start"
               >
                 Read More
               </button>
             </div>
           </div>
           <div
-            class="border border-[#FFAC00] rounded-[15px] overflow-hidden shadow-lg flex flex-col min-h-[400px]"
+            class="border border-[#FFAC00] rounded-[15px] overflow-hidden shadow-lg flex flex-col"
           >
             <img
               src="./../assets/image/program.png"
               alt="Program Relawan"
               class="w-full h-50 object-cover"
             />
-            <div class="p-6 flex flex-col justify-between flex-grow">
+            <div class="lg:p-6 md:p-3 flex flex-col">
               <h3 class="text-xl font-semibold mb-4">
                 Pendaftaran Relawan Jendela Jakarta
               </h3>
               <button
-                class="border border-[#FFAC00] text-[#FFAC00] px-4 py-2 rounded-[15px] font-bold hover:bg-[#FFAC00] hover:text-white transition duration-300 self-start"
+                class="border border-[#FFAC00] text-[#FFAC00] px-4 py-2 rounded-lg font-bold hover:bg-[#FFAC00] hover:text-white transition duration-300 self-start"
               >
                 Read More
               </button>
             </div>
           </div>
           <div
-            class="border border-[#FFAC00] rounded-[15px] overflow-hidden shadow-lg flex flex-col min-h-[400px]"
+            class="border border-[#FFAC00] rounded-[15px] overflow-hidden shadow-lg flex flex-col"
           >
             <img
               src="./../assets/image/program.png"
               alt="Program Relawan"
               class="w-full h-50 object-cover"
             />
-            <div class="p-6 flex flex-col justify-between flex-grow">
+            <div class="lg:p-6 md:p-3 flex flex-col">
               <h3 class="text-xl font-semibold mb-4">
                 Pendaftaran Relawan Jendela Jakarta
               </h3>
               <button
-                class="border border-[#FFAC00] text-[#FFAC00] px-4 py-2 rounded-[15px] font-bold hover:bg-[#FFAC00] hover:text-white transition duration-300 self-start"
+                class="border border-[#FFAC00] text-[#FFAC00] px-4 py-2 rounded-lg font-bold hover:bg-[#FFAC00] hover:text-white transition duration-300 self-start"
               >
                 Read More
               </button>
@@ -225,69 +225,77 @@
 
   <section>
     <div class="bg-white py-10">
-      <div class="container mx-auto px-6 md:px-16 mb-16">
+      <div class="container mx-auto px-6 md:mb-16">
         <h2 class="text-4xl font-bold text-gray-900 mb-12 text-start">
           Bersama, Ciptakan <br />
           <span class="text-[#FFAC00]"> Perubahan</span> Melalui <br />
           <span class="text-red-500">Donasi Anda</span>
         </h2>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 rounded-[15px]">
-          <div
-            class="border border-red-500 rounded-[15px] overflow-hidden shadow-lg flex flex-col min-h-[400px]"
-          >
-            <img
-              src="./../assets/image/donasi.png"
-              alt="Donasi"
-              class="w-full h-50 object-cover"
-            />
-            <div class="p-6 flex flex-col justify-between flex-grow">
-              <h3 class="text-xl font-semibold mb-4">
-                1 Buku Sejuta Harapan! Bantu Rumah Baca Anak Papua
-              </h3>
-              <button
-                class="border border-red-500 text-red-500 px-4 py-2 rounded-md font-bold hover:bg-red-500 hover:text-white transition duration-300 self-start"
-              >
-                Read More
-              </button>
+        <div
+          class="grid grid-cols-1 md:grid-cols-3 lg:gap-10 md:gap-5 rounded-[15px]"
+        >
+          <div>
+            <div
+              class="border border-red-500 rounded-[15px] overflow-hidden shadow-lg flex flex-col"
+            >
+              <img
+                src="./../assets/image/donasi.png"
+                alt="Donasi"
+                class="w-full h-50 object-cover"
+              />
+              <div class="lg:p-6 md:p-3 flex flex-col">
+                <h3 class="text-xl font-semibold mb-4">
+                  1 Buku Sejuta Harapan! Bantu Rumah Baca Anak Papua
+                </h3>
+                <button
+                  class="border border-red-500 text-red-500 px-4 py-2 rounded-lg font-bold hover:bg-red-500 hover:text-white transition duration-300 self-start"
+                >
+                  Read More
+                </button>
+              </div>
             </div>
           </div>
-          <div
-            class="border border-red-500 rounded-[15px] overflow-hidden shadow-lg flex flex-col min-h-[400px]"
-          >
-            <img
-              src="./../assets/image/donasi.png"
-              alt="Donasi"
-              class="w-full h-50 object-cover"
-            />
-            <div class="p-6 flex flex-col justify-between flex-grow">
-              <h3 class="text-xl font-semibold mb-4">
-                1 Buku Sejuta Harapan! Bantu Rumah Baca Anak Papua
-              </h3>
-              <button
-                class="border border-red-500 text-red-500 px-4 py-2 rounded-md font-bold hover:bg-red-500 hover:text-white transition duration-300 self-start"
-              >
-                Read More
-              </button>
+          <div>
+            <div
+              class="border border-red-500 rounded-[15px] overflow-hidden shadow-lg flex flex-col"
+            >
+              <img
+                src="./../assets/image/donasi.png"
+                alt="Donasi"
+                class="w-full h-50 object-cover"
+              />
+              <div class="lg:p-6 md:p-3 flex flex-col">
+                <h3 class="text-xl font-semibold mb-4">
+                  1 Buku Sejuta Harapan! Bantu Rumah Baca Anak Papua
+                </h3>
+                <button
+                  class="border border-red-500 text-red-500 px-4 py-2 rounded-lg font-bold hover:bg-red-500 hover:text-white transition duration-300 self-start"
+                >
+                  Read More
+                </button>
+              </div>
             </div>
           </div>
-          <div
-            class="border border-red-500 rounded-[15px] overflow-hidden shadow-lg flex flex-col min-h-[400px]"
-          >
-            <img
-              src="./../assets/image/donasi.png"
-              alt="Donasi"
-              class="w-full h-50 object-cover"
-            />
-            <div class="p-6 flex flex-col justify-between flex-grow">
-              <h3 class="text-xl font-semibold mb-4">
-                1 Buku Sejuta Harapan! Bantu Rumah Baca Anak Papua
-              </h3>
-              <button
-                class="border border-red-500 text-red-500 px-4 py-2 rounded-md font-bold hover:bg-red-500 hover:text-white transition duration-300 self-start"
-              >
-                Read More
-              </button>
+          <div>
+            <div
+              class="border border-red-500 rounded-[15px] overflow-hidden shadow-lg flex flex-col"
+            >
+              <img
+                src="./../assets/image/donasi.png"
+                alt="Donasi"
+                class="w-full h-50 object-cover"
+              />
+              <div class="lg:p-6 md:p-3 flex flex-col">
+                <h3 class="text-xl font-semibold mb-4">
+                  1 Buku Sejuta Harapan! Bantu Rumah Baca Anak Papua
+                </h3>
+                <button
+                  class="border border-red-500 text-red-500 px-4 py-2 rounded-lg font-bold hover:bg-red-500 hover:text-white transition duration-300 self-start"
+                >
+                  Read More
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -312,9 +320,9 @@
           yang telah menciptakan dampak nyata bagi <br />
           pendidikan Nusantara."
         </p>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="grid grid-cols-2 lg:grid-cols-3 gap-6">
           <div
-            class="border border-gray-300 rounded-lg shadow-lg p-6 max-w-md mx-auto"
+            class="border border-gray-300 rounded-lg shadow-lg p-6 max-w-md mx-auto lg:block hidden"
           >
             <p
               class="text-gray-700 italic font-semibold mb-4 text-center leading-relaxed"

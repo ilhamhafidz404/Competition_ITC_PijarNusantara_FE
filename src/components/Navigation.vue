@@ -1,8 +1,8 @@
 <template>
-  <nav class="bg-primary text-white p-4 fixed top-0 w-full z-50 shadow-lg">
-    <div
-      class="container mx-auto flex justify-between items-center px-4 md:px-8"
-    >
+  <nav
+    class="bg-primary px-6 md:px-16 lg:px-20 text-white p-4 fixed top-0 w-full z-50 shadow-lg"
+  >
+    <div class="container mx-auto flex justify-between items-center">
       <div>
         <h1 class="text-2xl font-bold font-sekunder">Pijar Nusantara</h1>
       </div>
