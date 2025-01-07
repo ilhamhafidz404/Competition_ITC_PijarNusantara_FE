@@ -1,6 +1,6 @@
 <template>
   <section
-    class="grid lg:grid-cols-3 md:grid-cols-2 mx-10 my-20 gap-5 font-primary"
+    class="grid lg:grid-cols-3 md:grid-cols-2 mb-16 mt-28 mx-5 sm:mx-10 lg:mx-24 gap-5 font-primary"
   >
     <div>
       <div class="border border-red-500 rounded-[15px] shadow-xl">
@@ -25,14 +25,14 @@
       </div>
     </div>
     <div class="lg:col-span-2 border border-primary rounded-[15px] shadow-xl">
-      <div class="my-5 mx-10">
-        <h1 class="text-5xl font-bold">
+      <div class="md:my-5 md:mx-10 my-3 mx-5">
+        <h1 class="md:text-4xl text-3xl font-bold">
           <span class="text-primary">Pendaftaran</span> Komunitas <br /><span
             class="text-red-500"
             >Jendela Jakarta</span
           >
         </h1>
-        <h2 class="text-3xl font-semibold mt-5 text-primary">Deskripsi</h2>
+        <h2 class="md:text-3xl text-2xl font-semibold mt-5 text-primary">Deskripsi</h2>
         <p class="text-gray-700 my-5 text-lg">
           Sebuah komunitas yang berfokus pada pengembangan pendidikan anak,
           dengan tujuan utama meningkatkan minat baca anak-anak melalui berbagai
@@ -41,10 +41,10 @@
           dapat membuka peluang besar untuk masa depan mereka yang lebih cerah.
           📖📚
         </p>
-        <h2 class="text-3xl font-semibold mt-5 text-primary">Contact Us</h2>
+        <h2 class="md:text-3xl text-2xl font-semibold mt-5 text-primary">Contact Us</h2>
         <div class="flex items-center my-3 gap-3">
           <i
-            class="fa-brands fa-instagram text-5xl rounded-lg p-2 text-white"
+            class="fa-brands fa-instagram md:text-5xl text-xl rounded-lg p-2 text-white"
             style="
               background: radial-gradient(
                   circle farthest-corner at 35% 90%,
@@ -94,7 +94,7 @@
         </div>
         <div class="flex items-center my-3 gap-3">
           <i
-            class="fa-brands fa-instagram text-5xl rounded-lg p-2 text-white"
+            class="fa-brands fa-instagram md:text-5xl text-xl rounded-lg p-2 text-white"
             style="
               background: radial-gradient(
                   circle farthest-corner at 35% 90%,
