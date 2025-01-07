@@ -7,7 +7,7 @@
         <div class="md:w-1/2 text-center md:text-left">
           <h2 class="text-5xl font-bold text-gray-900">
             Bersama
-            <span class="text-[#FFAC00]">Menginspirasi</span><span>,</span>
+            <span class="text-[#FFAC00]">Menginspirasi</span>
 
             <br />
             Mencerdaskan
