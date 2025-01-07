@@ -2,9 +2,11 @@
   <section>
     <div class="bg-white py-10">
       <div
-        class="container mx-auto min-h-[600px] flex flex-col md:flex-row items-center px-6 md:px-16 lg:px-20 space-y-6 md:space-y-0 md:space-x-10 pt-20"
+        class="container mx-auto min-h-[600px] flex flex-col lg:flex-row items-center lg:gap-0 gap-8 px-6 md:px-16 lg:px-20 space-y-6 md:space-y-0 md:space-x-10 pt-20"
       >
-        <div class="md:w-1/2 text-center md:text-left">
+        <div
+          class="lg:w-1/2 w-full lg:order-1 order-2 text-center md:text-left"
+        >
           <h2 class="text-5xl font-bold text-gray-900">
             Bersama
             <span class="text-[#FFAC00]">Menginspirasi</span>
@@ -31,8 +33,8 @@
             </button>
           </div>
         </div>
-        <div class="md:w-1/2">
-          <div class="relative w-full flex justify-center md:justify-end">
+        <div class="lg:w-1/2 w-full lg:order-1">
+          <div class="relative w-full flex lg:justify-end justify-center">
             <img
               src="./../assets/image/hero_1.png"
               alt="Anak Bahagia"
@@ -47,15 +49,15 @@
   <section>
     <div class="bg-gradient-to-r from-[#FFAC00] to-red-500 text-white py-10">
       <div class="container mx-auto px-10 text-center">
-        <p class="text-2xl md:text-4xl italic font-semibold">
+        <p class="text-xl md:text-3xl xl:text-4xl italic font-semibold">
           <span class="relative">
             <i
               class="fas fa-quote-left text-2xl absolute -left-6 top-1 text-white"
             ></i>
             Pendidikan
           </span>
-          adalah senjata paling ampuh <br />
-          yang dapat Anda gunakan untuk <br />
+          adalah senjata paling ampuh <br class="sm:block hidden" />
+          yang dapat Anda gunakan untuk <br class="sm:block hidden" />
           mengubah
           <span class="relative">
             dunia
@@ -146,8 +148,11 @@
   <section>
     <div class="bg-white py-10">
       <div class="container mx-auto px-6 md:mb-16">
-        <h2 class="text-4xl font-bold text-gray-900 mb-12 text-start">
-          Temukan <span class="text-[#FFAC00]">Program</span> Yang <br />
+        <h2
+          class="md:text-4xl text-3xl md:text-left text-center font-bold text-gray-900 mb-12"
+        >
+          Temukan <span class="text-[#FFAC00]">Program</span> Yang
+          <br class="sm:block hidden" />
           Tepat <span class="text-red-500">Untukmu</span>
         </h2>
 
@@ -226,9 +231,12 @@
   <section>
     <div class="bg-white py-10">
       <div class="container mx-auto px-6 md:mb-16">
-        <h2 class="text-4xl font-bold text-gray-900 mb-12 text-start">
-          Bersama, Ciptakan <br />
-          <span class="text-[#FFAC00]"> Perubahan</span> Melalui <br />
+        <h2
+          class="md:text-4xl text-3xl md:text-left text-center font-bold text-gray-900 mb-12"
+        >
+          Bersama, Ciptakan <br class="sm:block hidden" />
+          <span class="text-[#FFAC00]"> Perubahan</span> Melalui
+          <br class="sm:block hidden" />
           <span class="text-red-500">Donasi Anda</span>
         </h2>
 
@@ -312,7 +320,9 @@
   <section>
     <div class="bg-white py-10">
       <div class="container mx-auto px-6 md:px-16 lg:px-20 mb-">
-        <h2 class="text-5xl font-bold text-center text-[#FFAC00] mb-4">
+        <h2
+          class="md:text-5xl text-3xl font-bold text-center text-[#FFAC00] mb-4"
+        >
           Testimoni
         </h2>
         <p class="text-center text-gray-700 text-xl mb-10">
@@ -320,7 +330,7 @@
           yang telah menciptakan dampak nyata bagi <br />
           pendidikan Nusantara."
         </p>
-        <div class="grid grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           <div
             class="border border-gray-300 rounded-lg shadow-lg p-6 max-w-md mx-auto lg:block hidden"
           >
@@ -348,7 +358,7 @@
           </div>
 
           <div
-            class="border border-gray-300 rounded-lg shadow-lg p-6 max-w-md mx-auto"
+            class="border border-gray-300 rounded-lg shadow-lg p-6 max-w-md mx-auto md:block hidden"
           >
             <p
               class="text-gray-700 italic font-semibold mb-4 text-center leading-relaxed"
@@ -429,7 +439,7 @@
 
   <section class="bg-white py-10">
     <div
-      class="container mx-auto px-6 md:px-16 lg:px-20 grid grid-cols-1 md:grid-cols-2 gap-10 items-center"
+      class="container mx-auto px-6 md:px-16 lg:px-20 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center"
     >
       <div class="text-center md:text-left">
         <h2
@@ -444,7 +454,7 @@
           dalam menemukan informasi yang dibutuhkan.
         </p>
       </div>
-      <div class="space-y-4 p-5">
+      <div class="space-y-4 p-0 lg:p-5">
         <div class="border border-gray-300 rounded-lg shadow-md">
           <button
             class="w-full text-left px-4 py-3 bg-white font-semibold text-slate-900 flex justify-between items-center"

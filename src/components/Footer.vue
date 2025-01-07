@@ -3,7 +3,7 @@
     <div
       class="grid grid-cols-1 md:grid-cols-7 gap-5 mx-6 md:mx-16 text-secondary"
     >
-      <div class="md:col-span-2">
+      <div class="lg:col-span-2 md:col-span-4">
         <h1 class="font-bold mt-10 mb-5 text-2xl font-sekunder">
           Pijar Nusantara
         </h1>
@@ -19,7 +19,7 @@
           <a href=""><i class="fa-brands fa-linkedin text-2xl"></i></a>
         </div>
       </div>
-      <div class="md:col-span-2">
+      <div class="lg:col-span-2 md:col-span-3">
         <h1 class="font-bold mt-10 mb-5 text-2xl">Location</h1>
         <p>
           Jl. Pramuka No.67 <br />
@@ -27,7 +27,7 @@
           Jawa Barat 45512
         </p>
       </div>
-      <div class="md:col-span-3">
+      <div class="lg:col-span-3 md:col-span-7">
         <h1 class="font-bold mt-10 mb-5 text-2xl">Subscription</h1>
         <p>
           Dapatkan update terbaru dan pengetahuan <br />
