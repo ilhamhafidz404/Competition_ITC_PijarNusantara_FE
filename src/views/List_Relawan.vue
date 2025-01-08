@@ -1,0 +1,135 @@
+<script setup lang="ts">
+import { RouterLink } from "vue-router";
+</script>
+
+<template>
+  <section>
+    <!-- Header Section -->
+    <div class="bg-gradient-to-r from-primary to-red-500 text-white py-10">
+      <div class="container mx-auto px-10 pt-32 text-center">
+        <h1 class="text-white text-4xl font-bold mb-8">
+          Temukan Lebih Banyak <br />
+          Program Relawan
+        </h1>
+      </div>
+    </div>
+
+    <!-- Konten Section -->
+    <div class="bg-white py-16">
+      <div class="container mx-auto px-4 mb-5 lg:px-20">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+          <!-- Filter Section -->
+          <div class="col-span-1">
+            <div
+              class="bg-white border border-red-500 shadow-md p-4 rounded-lg"
+            >
+              <div class="mb-4">
+                <div class="relative">
+                  <input
+                    type="text"
+                    id="search"
+                    placeholder="Cari program"
+                    class="w-full border border-red-500 rounded-lg p-2 focus:ring-red-500 focus:border-red-500"
+                  />
+                  <i
+                    class="fas fa-search absolute right-3 top-3 text-primary"
+                  ></i>
+                </div>
+              </div>
+              <div>
+                <select
+                  id="sort"
+                  class="w-full border bg-white border-red-500 rounded-lg p-2 focus:ring-red-500 focus:border-red-500"
+                >
+                  <option>Paling Populer</option>
+                  <option>Terbaru</option>
+                  <option>Terdekat</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <!-- Program Cards Section -->
+          <div class="col-span-3 grid grid-cols-1 gap-6 mb-5">
+            <!-- Card 1 -->
+            <div
+              class="bg-white border border-primary shadow-md rounded-[15px] flex overflow-hidden items-center mb-5"
+            >
+              <img
+                src="./../assets/image/program.png"
+                alt="List_Relawan"
+                class="w-1/2 h-50 object-cover"
+              />
+              <div class="w-2/3 p-4">
+                <h2 class="lg:text-2xl text-2xl font-bold text-gray-900 mb-2">
+                  Pendaftaran Komunitas Jendela Jakarta
+                </h2>
+                <p class="text-md text-gray-600 mb-7">
+                  Sebuah komunitas yang berfokus dalam pengembangan pendidikan
+                  anak terutama pada minat baca anak 📖📚.
+                </p>
+                <RouterLink
+                  to="Detail_Program"
+                  class="bg-white border border-red-500 text-red-500 px-4 py-2 rounded-lg hover:bg-red-500 hover:text-white transition"
+                >
+                  Daftar Sekarang
+                </RouterLink>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div
+              class="bg-white border border-primary shadow-md rounded-[15px] flex overflow-hidden items-center mb-5"
+            >
+              <img
+                src="./../assets/image/program.png"
+                alt="List_Relawan"
+                class="w-1/2 h-50 object-cover"
+              />
+              <div class="w-2/3 p-4">
+                <h2 class="lg:text-2xl text-2xl font-bold text-gray-900 mb-2">
+                  Pendaftaran Komunitas Jendela Jakarta
+                </h2>
+                <p class="text-md text-gray-600 mb-7">
+                  Sebuah komunitas yang berfokus dalam pengembangan pendidikan
+                  anak terutama pada minat baca anak 📖📚.
+                </p>
+                <RouterLink
+                  to="Detail_Program"
+                  class="bg-white border border-red-500 text-red-500 px-4 py-2 rounded-lg hover:bg-red-500 hover:text-white transition"
+                >
+                  Daftar Sekarang
+                </RouterLink>
+              </div>
+            </div>
+            <!-- Card 3 -->
+            <div
+              class="bg-white border border-primary shadow-md rounded-[15px] flex overflow-hidden items-center"
+            >
+              <img
+                src="./../assets/image/program.png"
+                alt="List_Relawan"
+                class="w-1/2 h-50 object-cover"
+              />
+              <div class="w-2/3 p-4">
+                <h2 class="lg:text-2xl text-2xl font-bold text-gray-900 mb-2">
+                  Pendaftaran Komunitas Jendela Jakarta
+                </h2>
+                <p class="text-md text-gray-600 mb-7">
+                  Sebuah komunitas yang berfokus dalam pengembangan pendidikan
+                  anak terutama pada minat baca anak 📖📚.
+                </p>
+                <RouterLink
+                  to="Detail_Program"
+                  class="bg-white border border-red-500 text-red-500 px-4 py-2 rounded-lg hover:bg-red-500 hover:text-white transition"
+                >
+                  Daftar Sekarang
+                </RouterLink>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
