@@ -1,10 +1,14 @@
 <template>
   <!-- hero section -->
-  <section class="mb-10 mx-5 sm:mb-10 lg:mx-24">
+  <section class="mb-10">
     <div
       class="container mx-auto min-h-[600px] flex flex-col lg:flex-row items-center lg:gap-0 gap-8 px-6 md:px-16 lg:px-20 space-y-6 md:space-y-0 md:space-x-10 pt-20"
     >
-      <div class="lg:w-1/2 w-full lg:order-1 order-2 text-center md:text-left">
+      <div
+        class="lg:w-1/2 w-full lg:order-1 order-2 text-center md:text-left"
+        data-aos="fade-right"
+        data-aos-duration="1000"
+      >
         <h2 class="lg:text-5xl text-2xl font-bold text-gray-900">
           Bersama
           <span class="text-primary">Menginspirasi</span>
@@ -32,7 +36,11 @@
         </div>
       </div>
       <div class="lg:w-1/2 w-full lg:order-1">
-        <div class="relative w-full flex lg:justify-end justify-center">
+        <div
+          class="relative w-full flex lg:justify-end justify-center"
+          data-aos="fade-left"
+          data-aos-duration="1000"
+        >
           <img
             src="./../assets/image/hero_1.png"
             alt="Anak Bahagia"
@@ -75,7 +83,12 @@
   <!-- end quetes -->
 
   <!-- visi misi -->
-  <section class="my-16 mx-5 sm:mx-10 lg:mx-24">
+  <section
+    class="my-16"
+    data-aos="fade-up"
+    data-aos-duration="1000"
+    data-aos-once="true"
+  >
     <div
       class="container mx-auto grid grid-cols-1 lg:grid-cols-3 lg:gap-10 gap-3 px-8 md:px-16"
     >
@@ -143,7 +156,7 @@
   <!-- end visi misi -->
 
   <!-- program -->
-  <section class="my-16 mx-5 sm:mx-10 lg:mx-24">
+  <section class="">
     <div class="container mx-auto px-6 md:mb-16">
       <h2
         class="md:text-4xl text-3xl md:text-left text-center font-bold text-gray-900 mb-12"
@@ -158,6 +171,9 @@
       >
         <div
           class="border border-primary rounded-[15px] overflow-hidden shadow-lg flex flex-col"
+          data-aos="flip-left"
+          data-aos-duration="750"
+          data-aos-once="true"
         >
           <img
             src="./../assets/image/program.png"
@@ -177,6 +193,9 @@
         </div>
         <div
           class="border border-primary rounded-[15px] overflow-hidden shadow-lg flex flex-col"
+          data-aos="flip-left"
+          data-aos-duration="750"
+          data-aos-once="true"
         >
           <img
             src="./../assets/image/program.png"
@@ -196,6 +215,9 @@
         </div>
         <div
           class="border border-primary rounded-[15px] overflow-hidden shadow-lg flex flex-col"
+          data-aos="flip-left"
+          data-aos-duration="750"
+          data-aos-once="true"
         >
           <img
             src="./../assets/image/program.png"
@@ -227,7 +249,7 @@
   <!-- end program -->
 
   <!-- donasi -->
-  <section class="my-16 mx-5 sm:mx-10 lg:mx-24">
+  <section class="my-16">
     <div class="container mx-auto px-6 md:mb-16">
       <h2
         class="md:text-4xl text-3xl md:text-left text-center font-bold text-gray-900 mb-12"
@@ -241,7 +263,7 @@
       <div
         class="grid grid-cols-1 md:grid-cols-3 lg:gap-10 gap-5 rounded-[15px]"
       >
-        <div>
+        <div data-aos="flip-left" data-aos-duration="750" data-aos-once="true">
           <div
             class="border border-red-500 rounded-[15px] overflow-hidden shadow-lg flex flex-col"
           >
@@ -262,7 +284,7 @@
             </div>
           </div>
         </div>
-        <div>
+        <div data-aos="flip-left" data-aos-duration="750" data-aos-once="true">
           <div
             class="border border-red-500 rounded-[15px] overflow-hidden shadow-lg flex flex-col"
           >
@@ -283,7 +305,7 @@
             </div>
           </div>
         </div>
-        <div>
+        <div data-aos="flip-left" data-aos-duration="750" data-aos-once="true">
           <div
             class="border border-red-500 rounded-[15px] overflow-hidden shadow-lg flex flex-col"
           >
@@ -317,7 +339,7 @@
   <!-- end donasi -->
 
   <!-- testimoni -->
-  <section class="my-16 mx-5 sm:mx-10 lg:mx-24">
+  <section class="my-16">
     <div class="container mx-auto px-6 md:px-16 lg:px-20 mb-">
       <h2 class="md:text-5xl text-3xl font-bold text-center text-primary mb-4">
         Testimoni
@@ -433,11 +455,16 @@
   <!-- end testimoni -->
 
   <!-- FAQ -->
-  <section class="my-16 mx-5 sm:mx-10 lg:mx-24">
+  <section class="my-16">
     <div
       class="container mx-auto px-6 md:px-16 lg:px-20 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center"
     >
-      <div class="text-center md:text-left">
+      <div
+        class="text-center md:text-left"
+        data-aos="fade-right"
+        data-aos-duration="1000"
+        data-aos-once="true"
+      >
         <h2
           class="md:text-5xl text-3xl font-bold text-slate-900 mb-6 leading-tight"
         >
@@ -450,7 +477,12 @@
           dalam menemukan informasi yang dibutuhkan.
         </p>
       </div>
-      <div class="space-y-4 p-0 lg:p-5">
+      <div
+        class="space-y-4 p-0 lg:p-5"
+        data-aos="fade-left"
+        data-aos-duration="1000"
+        data-aos-once="true"
+      >
         <div class="border border-gray-300 rounded-lg shadow-md">
           <button
             class="w-full text-left px-4 py-3 bg-white font-semibold text-slate-900 flex justify-between items-center"

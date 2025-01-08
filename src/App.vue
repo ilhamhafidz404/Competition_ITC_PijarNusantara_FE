@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="min-w-screen overflow-x-hidden">
     <Navigation />
-    <main>
+    <main class="min-w-screen overflow-x-hidden">
       <router-view></router-view>
     </main>
     <Footer />
