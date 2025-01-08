@@ -46,8 +46,8 @@
 
   <!-- quetes -->
   <section>
-    <div class="bg-gradient-to-r from-[#FFAC00] to-red-500 text-white py-10">
-      <div class="container mx-auto px-10 text-center">
+    <div class="bg-gradient-to-r from-primary to-red-500 text-white py-10">
+      <div class="container mx-auto px-10 pt-10 text-center">
         <p class="text-xl md:text-3xl xl:text-4xl italic font-semibold">
           <span class="relative">
             <i
@@ -215,7 +215,8 @@
         </div>
       </div>
       <div class="text-end mt-12">
-        <RouterLink to="Detail_Program"
+        <RouterLink
+          to="Detail_Program"
           class="border border-primary text-primary px-8 py-3 rounded-lg font-bold hover:bg-[#FFAC00] hover:text-white transition duration-300"
         >
           Lihat Lebih Banyak <i class="fa-solid fa-arrow-right"></i>
@@ -543,7 +544,7 @@
   <!-- end FAQ -->
 </template>
 <script>
-import { RouterLink } from 'vue-router';
+import { RouterLink } from "vue-router";
 
 export default {
   data() {
