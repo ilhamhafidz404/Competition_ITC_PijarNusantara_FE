@@ -15,7 +15,7 @@ import { RouterLink } from "vue-router";
     </div>
 
     <!-- Konten Section -->
-    <div class="bg-white py-16">
+    <div class="bg-white my-16 mx-5 sm:mx-10 lg:mx-14">
       <div class="container mx-auto px-4 mb-5 lg:px-20">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
           <!-- Filter Section -->
@@ -50,17 +50,17 @@ import { RouterLink } from "vue-router";
           </div>
 
           <!-- Program Cards Section -->
-          <div class="col-span-3 grid grid-cols-1 gap-6 mb-5">
+          <div class="md:col-span-3 grid grid-cols-1 gap-6 mb-5">
             <!-- Card 1 -->
             <div
-              class="bg-white border border-primary shadow-md rounded-[15px] flex overflow-hidden items-center mb-5"
+              class="bg-white border border-primary shadow-md rounded-[15px] md:flex overflow-hidden items-center mb-5"
             >
               <img
                 src="./../assets/image/program.png"
                 alt="List_Relawan"
-                class="w-1/2 h-50 object-cover"
+                class="md:w-1/2 h-50 object-cover"
               />
-              <div class="w-2/3 p-4">
+              <div class="md:w-2/3 p-4">
                 <h2 class="lg:text-2xl text-2xl font-bold text-gray-900 mb-2">
                   Pendaftaran Komunitas Jendela Jakarta
                 </h2>
@@ -76,17 +76,15 @@ import { RouterLink } from "vue-router";
                 </RouterLink>
               </div>
             </div>
-
-            <!-- Card 2 -->
             <div
-              class="bg-white border border-primary shadow-md rounded-[15px] flex overflow-hidden items-center mb-5"
+              class="bg-white border border-primary shadow-md rounded-[15px] md:flex overflow-hidden items-center mb-5"
             >
               <img
                 src="./../assets/image/program.png"
                 alt="List_Relawan"
-                class="w-1/2 h-50 object-cover"
+                class="md:w-1/2 h-50 object-cover"
               />
-              <div class="w-2/3 p-4">
+              <div class="md:w-2/3 p-4">
                 <h2 class="lg:text-2xl text-2xl font-bold text-gray-900 mb-2">
                   Pendaftaran Komunitas Jendela Jakarta
                 </h2>
@@ -102,16 +100,15 @@ import { RouterLink } from "vue-router";
                 </RouterLink>
               </div>
             </div>
-            <!-- Card 3 -->
             <div
-              class="bg-white border border-primary shadow-md rounded-[15px] flex overflow-hidden items-center"
+              class="bg-white border border-primary shadow-md rounded-[15px] md:flex overflow-hidden items-center mb-5"
             >
               <img
                 src="./../assets/image/program.png"
                 alt="List_Relawan"
-                class="w-1/2 h-50 object-cover"
+                class="md:w-1/2 h-50 object-cover"
               />
-              <div class="w-2/3 p-4">
+              <div class="md:w-2/3 p-4">
                 <h2 class="lg:text-2xl text-2xl font-bold text-gray-900 mb-2">
                   Pendaftaran Komunitas Jendela Jakarta
                 </h2>
