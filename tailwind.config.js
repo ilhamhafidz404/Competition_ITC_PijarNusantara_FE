@@ -8,7 +8,7 @@ export default {
         sekunder: ["'Kaushan Script'", "cursive"],
       },
       colors: {
-        primary: "#ffac00",
+        primary: "#ffd43b",
         secondary: "#fafafa",
       },
     },

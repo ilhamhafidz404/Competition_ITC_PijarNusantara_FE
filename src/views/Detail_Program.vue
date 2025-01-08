@@ -27,10 +27,7 @@
     <div class="lg:col-span-2 border border-primary rounded-[15px] shadow-xl">
       <div class="md:my-5 md:mx-10 my-3 mx-5">
         <h1 class="md:text-4xl text-3xl font-bold">
-          <span class="text-primary">Pendaftaran</span> Komunitas <br /><span
-            class="text-red-500"
-            >Jendela Jakarta</span
-          >
+          Pendaftaran Komunitas <br />  Jendela Jakarta
         </h1>
         <h2 class="md:text-3xl text-2xl font-semibold mt-5 text-primary">Deskripsi</h2>
         <p class="text-gray-700 my-5 text-lg">

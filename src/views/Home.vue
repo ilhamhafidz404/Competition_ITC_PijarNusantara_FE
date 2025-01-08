@@ -104,7 +104,7 @@
           <ul class="mt-2 space-y-4">
             <li class="flex items-center">
               <div
-                class="bg-[#FFAC00] text-white font-bold min-w-10 h-10 flex items-center justify-center rounded-lg mr-4"
+                class="bg-primary text-white font-bold min-w-10 h-10 flex items-center justify-center rounded-lg mr-4"
               >
                 1
               </div>
@@ -115,7 +115,7 @@
             </li>
             <li class="flex items-center">
               <div
-                class="bg-[#FFAC00] text-white font-bold min-w-10 h-10 flex items-center justify-center rounded-lg mr-4"
+                class="bg-primary text-white font-bold min-w-10 h-10 flex items-center justify-center rounded-lg mr-4"
               >
                 2
               </div>
@@ -126,7 +126,7 @@
             </li>
             <li class="flex items-center">
               <div
-                class="bg-[#FFAC00] text-white font-bold min-w-10 h-10 flex items-center justify-center rounded-lg mr-4"
+                class="bg-primary text-white font-bold min-w-10 h-10 flex items-center justify-center rounded-lg mr-4"
               >
                 3
               </div>
