@@ -169,12 +169,17 @@
       <div
         class="grid grid-cols-1 md:grid-cols-3 lg:gap-10 gap-5 rounded-[15px]"
       >
+        <p v-if="isLoadingGetVolunteers" class="text-center">Loading</p>
         <div
+          v-for="(volunteer, index) in volunteers"
+          :key="index"
           class="border border-primary rounded-[15px] overflow-hidden shadow-lg flex flex-col"
           data-aos="flip-left"
           data-aos-duration="750"
           data-aos-once="true"
         >
+          <!-- <div v-if="index < 3"> -->
+          <!-- :src="'alope.id/' + volunteer.image" -->
           <img
             src="./../assets/image/program.png"
             alt="Program Relawan"
@@ -182,7 +187,7 @@
           />
           <div class="lg:p-6 p-4 flex flex-col">
             <h3 class="text-xl font-semibold mb-4">
-              Pendaftaran Relawan Jendela Jakarta
+              {{ volunteer.title }}
             </h3>
             <button
               class="border border-primary text-primary px-4 py-2 rounded-lg font-bold hover:bg-[#FFAC00] hover:text-white transition duration-300 self-start"
@@ -190,50 +195,7 @@
               Read More
             </button>
           </div>
-        </div>
-        <div
-          class="border border-primary rounded-[15px] overflow-hidden shadow-lg flex flex-col"
-          data-aos="flip-left"
-          data-aos-duration="750"
-          data-aos-once="true"
-        >
-          <img
-            src="./../assets/image/program.png"
-            alt="Program Relawan"
-            class="w-full h-50 object-cover"
-          />
-          <div class="lg:p-6 p-4 flex flex-col">
-            <h3 class="text-xl font-semibold mb-4">
-              Pendaftaran Relawan Jendela Jakarta
-            </h3>
-            <button
-              class="border border-primary text-primary px-4 py-2 rounded-lg font-bold hover:bg-[#FFAC00] hover:text-white transition duration-300 self-start"
-            >
-              Read More
-            </button>
-          </div>
-        </div>
-        <div
-          class="border border-primary rounded-[15px] overflow-hidden shadow-lg flex flex-col"
-          data-aos="flip-left"
-          data-aos-duration="750"
-          data-aos-once="true"
-        >
-          <img
-            src="./../assets/image/program.png"
-            alt="Program Relawan"
-            class="w-full h-50 object-cover"
-          />
-          <div class="lg:p-6 p-4 flex flex-col">
-            <h3 class="text-xl font-semibold mb-4">
-              Pendaftaran Relawan Jendela Jakarta
-            </h3>
-            <button
-              class="border border-primary text-primary px-4 py-2 rounded-lg font-bold hover:bg-[#FFAC00] hover:text-white transition duration-300 self-start"
-            >
-              Read More
-            </button>
-          </div>
+          <!-- </div> -->
         </div>
       </div>
       <div class="text-end mt-12">
@@ -576,18 +538,57 @@
   <!-- end FAQ -->
 </template>
 <script>
+import axios from "axios";
 import { RouterLink } from "vue-router";
 
 export default {
   data() {
     return {
       activeAccordion: null,
+
+      isLoadingGetVolunteers: false,
+      volunteers: [],
     };
   },
   methods: {
     toggleAccordion(id) {
       this.activeAccordion = this.activeAccordion === id ? null : id;
     },
+
+    getDataVolunteers() {
+      this.isLoadingGetVolunteers = true;
+      axios
+        .get("http://127.0.0.1:8000/api/user/volunteer")
+        .then((response) => {
+          if (response) {
+            this.isLoadingGetVolunteers = false;
+            this.volunteers = response.data.data;
+          }
+        })
+        .catch((error) => {
+          this.isLoadingGetVolunteers = false;
+          console.log("Server error:", error);
+        });
+    },
+    // getDataVolunteers() {
+    //   this.isLoadingGetVolunteers = true;
+    //   axios
+    //     .get("http://127.0.0.1:8000/api/user/volunteer")
+    //     .then((response) => {
+    //       if (response) {
+    //         this.isLoadingGetVolunteers = false;
+    //         this.volunteers = response.data.data;
+    //       }
+    //     })
+    //     .catch((error) => {
+    //       this.isLoadingGetVolunteers = false;
+    //       console.log("Server error:", error);
+    //     });
+    // },
+  },
+  mounted() {
+    this.getDataVolunteers();
+    // this.getDataVolunteers();
   },
 };
 </script>
