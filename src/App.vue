@@ -1,10 +1,16 @@
 <template>
   <div>
-    <Navigation />
+    <!-- Navigation hanya ditampilkan jika rutenya bukan /login atau /register -->
+    <Navigation
+      v-if="$route.path !== '/login' && $route.path !== '/register'"
+    />
+
     <main>
       <router-view></router-view>
     </main>
-    <Footer />
+
+    <!-- Footer hanya ditampilkan jika rutenya bukan /login atau /register -->
+    <Footer v-if="$route.path !== '/login' && $route.path !== '/register'" />
   </div>
 </template>
 <script>
