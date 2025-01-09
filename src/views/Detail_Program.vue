@@ -9,135 +9,38 @@
           <span
             class="bg-red-500/20 text-red-500 font-semibold px-5 py-3 rounded text-lg mx-1 mb-2 inline-block"
           >
-            Relawan
-          </span>
-          <span
-            class="bg-primary/20 text-primary font-semibold px-5 py-3 rounded text-lg mx-1 mb-2 inline-block"
-          >
-            Mentor
-          </span>
-          <span
-            class="bg-gray-900/20 text-gray-900 font-semibold px-5 py-3 rounded text-lg mx-1 mb-2 inline-block"
-          >
-            Pedamping
+            {{ volunteer.category }}
           </span>
         </div>
       </div>
     </div>
     <div class="lg:col-span-2 border border-primary rounded-[15px] shadow-xl">
       <div class="md:my-5 md:mx-10 my-3 mx-5">
-        <h1 class="md:text-4xl text-3xl font-bold">
-          Pendaftaran Komunitas <br />  Jendela Jakarta
-        </h1>
-        <h2 class="md:text-3xl text-2xl font-semibold mt-5 text-primary">Deskripsi</h2>
+        <h1 class="md:text-4xl text-3xl font-bold">{{ volunteer.title }}</h1>
+        <h2 class="md:text-3xl text-2xl font-semibold mt-5 text-primary">
+          Deskripsi
+        </h2>
         <p class="text-gray-700 my-5 text-lg">
-          Sebuah komunitas yang berfokus pada pengembangan pendidikan anak,
-          dengan tujuan utama meningkatkan minat baca anak-anak melalui berbagai
-          program kreatif dan kegiatan inspiratif. Kami percaya bahwa membaca
-          adalah jendela dunia, dan melalui pembiasaan membaca sejak dini, kita
-          dapat membuka peluang besar untuk masa depan mereka yang lebih cerah.
-          📖📚
+          {{ volunteer.description }}
         </p>
-        <h2 class="md:text-3xl text-2xl font-semibold mt-5 text-primary">Contact Us</h2>
+        <h2 class="md:text-3xl text-2xl font-semibold mt-5 text-primary">
+          Contact Us
+        </h2>
         <div class="flex items-center my-3 gap-3">
           <i
-            class="fa-brands fa-instagram md:text-5xl text-xl rounded-lg p-2 text-white"
-            style="
-              background: radial-gradient(
-                  circle farthest-corner at 35% 90%,
-                  #fec564,
-                  transparent 50%
-                ),
-                radial-gradient(
-                  circle farthest-corner at 0 140%,
-                  #fec564,
-                  transparent 50%
-                ),
-                radial-gradient(
-                  ellipse farthest-corner at 0 -25%,
-                  #5258cf,
-                  transparent 50%
-                ),
-                radial-gradient(
-                  ellipse farthest-corner at 20% -50%,
-                  #5258cf,
-                  transparent 50%
-                ),
-                radial-gradient(
-                  ellipse farthest-corner at 100% 0,
-                  #893dc2,
-                  transparent 50%
-                ),
-                radial-gradient(
-                  ellipse farthest-corner at 60% -20%,
-                  #893dc2,
-                  transparent 50%
-                ),
-                radial-gradient(
-                  ellipse farthest-corner at 100% 100%,
-                  #d9317a,
-                  transparent
-                ),
-                linear-gradient(
-                  #6559ca,
-                  #bc318f 30%,
-                  #e33f5f 50%,
-                  #f77638 70%,
-                  #fec66d 100%
-                );
-            "
+            class="fa-brands fa-instagram md:text-3xl text-xl rounded-lg p-2 text-primary"
           ></i>
-          <a href="" class="text-xl text-red-500">@jendela.jakarta</a>
+          <a href="" class="text-xl text-red-500">{{
+            volunteer.contact_instagram
+          }}</a>
         </div>
         <div class="flex items-center my-3 gap-3">
           <i
-            class="fa-brands fa-instagram md:text-5xl text-xl rounded-lg p-2 text-white"
-            style="
-              background: radial-gradient(
-                  circle farthest-corner at 35% 90%,
-                  #fec564,
-                  transparent 50%
-                ),
-                radial-gradient(
-                  circle farthest-corner at 0 140%,
-                  #fec564,
-                  transparent 50%
-                ),
-                radial-gradient(
-                  ellipse farthest-corner at 0 -25%,
-                  #5258cf,
-                  transparent 50%
-                ),
-                radial-gradient(
-                  ellipse farthest-corner at 20% -50%,
-                  #5258cf,
-                  transparent 50%
-                ),
-                radial-gradient(
-                  ellipse farthest-corner at 100% 0,
-                  #893dc2,
-                  transparent 50%
-                ),
-                radial-gradient(
-                  ellipse farthest-corner at 60% -20%,
-                  #893dc2,
-                  transparent 50%
-                ),
-                radial-gradient(
-                  ellipse farthest-corner at 100% 100%,
-                  #d9317a,
-                  transparent
-                ),
-                linear-gradient(
-                  #6559ca,
-                  #bc318f 30%,
-                  #e33f5f 50%,
-                  #f77638 70%,
-                  #fec66d 100%
-                );
-            "
+            class="fa-solid fa-phone md:text-3xl text-xl rounded-lg p-2 text-primary"
           ></i>
-          <a href="" class="text-xl text-red-500">@jendela.jakarta</a>
+          <a href="" class="text-xl text-red-500">{{
+            volunteer.contact_phone
+          }}</a>
         </div>
         <button
           class="border border-[#FFAC00] text-[#FFAC00] px-4 py-2 mt-4 rounded-md font-bold hover:bg-[#FFAC00] hover:text-white transition duration-300"
@@ -148,3 +51,37 @@
     </div>
   </section>
 </template>
+
+<script>
+import axios from "axios";
+export default {
+  data() {
+    return {
+      isLoadingGetVolunteer: false,
+      volunteer: {},
+    };
+  },
+  methods: {
+    getDataVolunteer() {
+      this.isLoadingGetVolunteer = true;
+      axios
+        .get("http://127.0.0.1:8000/api/user/volunteer/1")
+        .then((response) => {
+          if (response) {
+            console.log(response.data.data);
+            this.isLoadingGetVolunteer = false;
+            this.volunteer = response.data.data;
+          }
+        })
+        .catch((error) => {
+          this.isLoadingGetVolunteer = false;
+          console.log("Server error:", error);
+        });
+    },
+  },
+  mounted() {
+    this.getDataVolunteer();
+    // this.getDataVolunteers();
+  },
+};
+</script>

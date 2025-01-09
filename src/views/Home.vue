@@ -166,10 +166,10 @@
         Tepat <span class="text-red-500">Untukmu</span>
       </h2>
 
+      <p v-if="isLoadingGetVolunteers" class="text-center">Loading...</p>
       <div
         class="grid grid-cols-1 md:grid-cols-3 lg:gap-10 gap-5 rounded-[15px]"
       >
-        <p v-if="isLoadingGetVolunteers" class="text-center">Loading</p>
         <div
           v-for="(volunteer, index) in volunteers"
           :key="index"
@@ -189,11 +189,12 @@
             <h3 class="text-xl font-semibold mb-4">
               {{ volunteer.title }}
             </h3>
-            <button
+            <RouterLink
+              to="Detail_Program"
               class="border border-primary text-primary px-4 py-2 rounded-lg font-bold hover:bg-[#FFAC00] hover:text-white transition duration-300 self-start"
             >
               Read More
-            </button>
+            </RouterLink>
           </div>
           <!-- </div> -->
         </div>
@@ -221,11 +222,17 @@
         <br class="sm:block hidden" />
         <span class="text-red-500">Donasi Anda</span>
       </h2>
-
+      <p v-if="isLoadingGetDonasions" class="text-center">Loading...</p>
       <div
         class="grid grid-cols-1 md:grid-cols-3 lg:gap-10 gap-5 rounded-[15px]"
       >
-        <div data-aos="flip-left" data-aos-duration="750" data-aos-once="true">
+        <div
+          data-aos="flip-left"
+          data-aos-duration="750"
+          data-aos-once="true"
+          v-for="(donasions, index) in donasions"
+          :key="index"
+        >
           <div
             class="border border-red-500 rounded-[15px] overflow-hidden shadow-lg flex flex-col"
           >
@@ -236,49 +243,7 @@
             />
             <div class="lg:p-6 p-4 flex flex-col">
               <h3 class="text-xl font-semibold mb-4">
-                1 Buku Sejuta Harapan! Bantu Rumah Baca Anak Papua
-              </h3>
-              <button
-                class="border border-red-500 text-red-500 px-4 py-2 rounded-lg font-bold hover:bg-red-500 hover:text-white transition duration-300 self-start"
-              >
-                Read More
-              </button>
-            </div>
-          </div>
-        </div>
-        <div data-aos="flip-left" data-aos-duration="750" data-aos-once="true">
-          <div
-            class="border border-red-500 rounded-[15px] overflow-hidden shadow-lg flex flex-col"
-          >
-            <img
-              src="./../assets/image/donasi.png"
-              alt="Donasi"
-              class="w-full h-50 object-cover"
-            />
-            <div class="lg:p-6 p-4 flex flex-col">
-              <h3 class="text-xl font-semibold mb-4">
-                1 Buku Sejuta Harapan! Bantu Rumah Baca Anak Papua
-              </h3>
-              <button
-                class="border border-red-500 text-red-500 px-4 py-2 rounded-lg font-bold hover:bg-red-500 hover:text-white transition duration-300 self-start"
-              >
-                Read More
-              </button>
-            </div>
-          </div>
-        </div>
-        <div data-aos="flip-left" data-aos-duration="750" data-aos-once="true">
-          <div
-            class="border border-red-500 rounded-[15px] overflow-hidden shadow-lg flex flex-col"
-          >
-            <img
-              src="./../assets/image/donasi.png"
-              alt="Donasi"
-              class="w-full h-50 object-cover"
-            />
-            <div class="lg:p-6 p-4 flex flex-col">
-              <h3 class="text-xl font-semibold mb-4">
-                1 Buku Sejuta Harapan! Bantu Rumah Baca Anak Papua
+                {{ donasions.title }}
               </h3>
               <button
                 class="border border-red-500 text-red-500 px-4 py-2 rounded-lg font-bold hover:bg-red-500 hover:text-white transition duration-300 self-start"
@@ -548,6 +513,9 @@ export default {
 
       isLoadingGetVolunteers: false,
       volunteers: [],
+
+      isLoadingGetDonasions: false,
+      donasions: [],
     };
   },
   methods: {
@@ -570,6 +538,22 @@ export default {
           console.log("Server error:", error);
         });
     },
+    getDataDonsasions() {
+      this.isLoadingGetDonasions = true;
+      axios
+        .get("http://127.0.0.1:8000/api/user/donation")
+        .then((response) => {
+          if (response) {
+            this.isLoadingGetDonasions = false;
+            this.donasions = response.data.data;
+          }
+        })
+        .catch((error) => {
+          this.isLoadingGetDonasions = false;
+          console.log("Server error:", error);
+        });
+    },
+
     // getDataVolunteers() {
     //   this.isLoadingGetVolunteers = true;
     //   axios
@@ -588,6 +572,7 @@ export default {
   },
   mounted() {
     this.getDataVolunteers();
+    this.getDataDonsasions();
     // this.getDataVolunteers();
   },
 };

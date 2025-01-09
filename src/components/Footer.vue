@@ -4,32 +4,32 @@
       class="grid grid-cols-1 md:grid-cols-7 gap-5 mx-6 md:mx-16 text-secondary"
     >
       <div class="lg:col-span-2 md:col-span-4">
-        <h1 class="font-bold mt-10 mb-5 text-2xl font-sekunder">
+        <h1 class="font-extrabold mt-10 mb-5 text-2xl font-sekunder">
           Pijar Nusantara
         </h1>
-        <p>
+        <p class="font-semibold">
           Jelajahi bakat mengajar Anda <br />
           dan ciptakan dampak nyata<br />
           bagi pendidikan Nusantara.
         </p>
         <div class="flex items-center gap-3 mt-5">
-          <h1 class="text-2xl font-bold mr-2">Follow Us:</h1>
+          <h1 class="text-2xl font-extrabold mr-2">Follow Us:</h1>
           <a href=""><i class="fa-brands fa-instagram text-2xl"></i></a>
           <a href=""><i class="fa-brands fa-github text-2xl"></i></a>
           <a href=""><i class="fa-brands fa-linkedin text-2xl"></i></a>
         </div>
       </div>
       <div class="lg:col-span-2 md:col-span-3">
-        <h1 class="font-bold mt-10 mb-5 text-2xl">Location</h1>
-        <p>
+        <h1 class="font-extrabold mt-10 mb-5 text-2xl">Location</h1>
+        <p class="font-semibold">
           Jl. Pramuka No.67 <br />
           Purwawinangun-Kuningan <br />
           Jawa Barat 45512
         </p>
       </div>
       <div class="lg:col-span-3 md:col-span-7">
-        <h1 class="font-bold mt-10 mb-5 text-2xl">Subscription</h1>
-        <p>
+        <h1 class="font-extrabold mt-10 mb-5 text-2xl">Subscription</h1>
+        <p class="font-semibold">
           Dapatkan update terbaru dan pengetahuan <br />
           bermanfaat langsung ke inbox Anda.
         </p>
