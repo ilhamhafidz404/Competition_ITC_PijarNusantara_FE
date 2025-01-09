@@ -4,7 +4,11 @@
   >
     <div>
       <div class="border border-red-500 rounded-[15px] shadow-xl">
-        <img src="../assets/image/detail/1.png" alt="" class="w-full" />
+        <img
+          :src="'https://alope.id/storage/' + volunteer.image_url"
+          alt=""
+          class="w-full"
+        />
         <div class="my-7 mx-2 text-center">
           <span
             class="bg-red-500/20 text-red-500 font-semibold px-5 py-3 rounded text-lg mx-1 mb-2 inline-block"
@@ -65,7 +69,7 @@ export default {
     getDataVolunteer() {
       this.isLoadingGetVolunteer = true;
       axios
-        .get("http://127.0.0.1:8000/api/user/volunteer/1")
+        .get("https://alope.id/api/user/volunteerAPI/1")
         .then((response) => {
           if (response) {
             console.log(response.data.data);

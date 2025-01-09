@@ -1,7 +1,3 @@
-<script setup lang="ts">
-import { RouterLink } from "vue-router";
-</script>
-
 <template>
   <section>
     <!-- Header Section -->
@@ -54,67 +50,20 @@ import { RouterLink } from "vue-router";
             <!-- Card 1 -->
             <div
               class="bg-white border border-primary shadow-md rounded-[15px] md:flex overflow-hidden items-center mb-5"
+              v-for="(volunteer, index) in volunteers"
+              :key="index"
             >
               <img
-                src="./../assets/image/program.png"
+                :src="'https://alope.id/storage/' + volunteer.image_url"
                 alt="List_Relawan"
                 class="md:w-1/2 h-50 object-cover"
               />
               <div class="md:w-2/3 p-4">
                 <h2 class="lg:text-2xl text-2xl font-bold text-gray-900 mb-2">
-                  Pendaftaran Komunitas Jendela Jakarta
+                  {{ volunteer.title }}
                 </h2>
                 <p class="text-md text-gray-600 mb-7">
-                  Sebuah komunitas yang berfokus dalam pengembangan pendidikan
-                  anak terutama pada minat baca anak 📖📚.
-                </p>
-                <RouterLink
-                  to="Detail_Program"
-                  class="bg-white border border-red-500 text-red-500 px-4 py-2 rounded-lg hover:bg-red-500 hover:text-white transition"
-                >
-                  Daftar Sekarang
-                </RouterLink>
-              </div>
-            </div>
-            <div
-              class="bg-white border border-primary shadow-md rounded-[15px] md:flex overflow-hidden items-center mb-5"
-            >
-              <img
-                src="./../assets/image/program.png"
-                alt="List_Relawan"
-                class="md:w-1/2 h-50 object-cover"
-              />
-              <div class="md:w-2/3 p-4">
-                <h2 class="lg:text-2xl text-2xl font-bold text-gray-900 mb-2">
-                  Pendaftaran Komunitas Jendela Jakarta
-                </h2>
-                <p class="text-md text-gray-600 mb-7">
-                  Sebuah komunitas yang berfokus dalam pengembangan pendidikan
-                  anak terutama pada minat baca anak 📖📚.
-                </p>
-                <RouterLink
-                  to="Detail_Program"
-                  class="bg-white border border-red-500 text-red-500 px-4 py-2 rounded-lg hover:bg-red-500 hover:text-white transition"
-                >
-                  Daftar Sekarang
-                </RouterLink>
-              </div>
-            </div>
-            <div
-              class="bg-white border border-primary shadow-md rounded-[15px] md:flex overflow-hidden items-center mb-5"
-            >
-              <img
-                src="./../assets/image/program.png"
-                alt="List_Relawan"
-                class="md:w-1/2 h-50 object-cover"
-              />
-              <div class="md:w-2/3 p-4">
-                <h2 class="lg:text-2xl text-2xl font-bold text-gray-900 mb-2">
-                  Pendaftaran Komunitas Jendela Jakarta
-                </h2>
-                <p class="text-md text-gray-600 mb-7">
-                  Sebuah komunitas yang berfokus dalam pengembangan pendidikan
-                  anak terutama pada minat baca anak 📖📚.
+                  {{ volunteer.description }}
                 </p>
                 <RouterLink
                   to="Detail_Program"
@@ -130,3 +79,40 @@ import { RouterLink } from "vue-router";
     </div>
   </section>
 </template>
+<script>
+// let text = "How are you doing today?";
+// const myArray = text.split(" ");
+// let word = myArray[1];
+import { RouterLink } from "vue-router";
+import axios from "axios";
+export default {
+  data() {
+    return {
+      isLoadingGetVolunteer: false,
+      volunteers: [],
+    };
+  },
+  methods: {
+    getDataVolunteer() {
+      this.isLoadingGetVolunteer = true;
+      axios
+        .get("https://alope.id/api/user/volunteerAPI")
+        .then((response) => {
+          if (response) {
+            console.log(response.data.data);
+            this.isLoadingGetVolunteer = false;
+            this.volunteers = response.data.data;
+          }
+        })
+        .catch((error) => {
+          this.isLoadingGetVolunteer = false;
+          console.log("Server error:", error);
+        });
+    },
+  },
+  mounted() {
+    this.getDataVolunteer();
+    // this.getDataVolunteers();
+  },
+};
+</script>

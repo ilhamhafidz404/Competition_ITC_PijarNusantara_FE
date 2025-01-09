@@ -156,7 +156,7 @@
   <!-- end visi misi -->
 
   <!-- program -->
-  <section class="">
+  <section>
     <div class="container mx-auto px-6 md:mb-16">
       <h2
         class="md:text-4xl text-3xl md:text-left text-center font-bold text-gray-900 mb-12"
@@ -173,29 +173,31 @@
         <div
           v-for="(volunteer, index) in volunteers"
           :key="index"
-          class="border border-primary rounded-[15px] overflow-hidden shadow-lg flex flex-col"
           data-aos="flip-left"
           data-aos-duration="750"
           data-aos-once="true"
         >
-          <!-- <div v-if="index < 3"> -->
-          <!-- :src="'alope.id/' + volunteer.image" -->
-          <img
-            src="./../assets/image/program.png"
-            alt="Program Relawan"
-            class="w-full h-50 object-cover"
-          />
-          <div class="lg:p-6 p-4 flex flex-col">
-            <h3 class="text-xl font-semibold mb-4">
-              {{ volunteer.title }}
-            </h3>
-            <RouterLink
-              to="Detail_Program"
-              class="border border-primary text-primary px-4 py-2 rounded-lg font-bold hover:bg-[#FFAC00] hover:text-white transition duration-300 self-start"
-            >
-              Read More
-            </RouterLink>
+          <div
+            class="border border-primary rounded-[15px] overflow-hidden shadow-lg flex flex-col"
+          >
+            <img
+              :src="'https://alope.id/storage/' + volunteer.image_url"
+              alt="Program Relawan"
+              class="w-full min-h-52 max-h-52 object-cover"
+            />
+            <div class="lg:p-6 p-4 flex flex-col">
+              <h3 class="text-xl font-semibold mb-4">
+                {{ volunteer.title }}
+              </h3>
+              <RouterLink
+                to="Detail_Program"
+                class="border border-primary text-primary px-4 py-2 rounded-lg font-bold hover:bg-[#FFAC00] hover:text-white transition duration-300 self-start"
+              >
+                Read More
+              </RouterLink>
+            </div>
           </div>
+          <!-- :src="'alope.id/' + volunteer.image" -->
           <!-- </div> -->
         </div>
       </div>
@@ -230,20 +232,20 @@
           data-aos="flip-left"
           data-aos-duration="750"
           data-aos-once="true"
-          v-for="(donasions, index) in donasions"
+          v-for="(donasion, index) in donasions"
           :key="index"
         >
           <div
             class="border border-red-500 rounded-[15px] overflow-hidden shadow-lg flex flex-col"
           >
             <img
-              src="./../assets/image/donasi.png"
+              :src="'https://alope.id/storage/' + donasion.image_url"
               alt="Donasi"
-              class="w-full h-50 object-cover"
+              class="w-full min-h-52 max-h-52 object-cover"
             />
             <div class="lg:p-6 p-4 flex flex-col">
               <h3 class="text-xl font-semibold mb-4">
-                {{ donasions.title }}
+                {{ donasion.title }}
               </h3>
               <button
                 class="border border-red-500 text-red-500 px-4 py-2 rounded-lg font-bold hover:bg-red-500 hover:text-white transition duration-300 self-start"
@@ -277,15 +279,18 @@
         pendidikan Nusantara."
       </p>
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div>
+          {{ testimonies [0] }}
+        </div>
         <div
           class="border border-gray-300 rounded-lg shadow-lg p-6 max-w-md mx-auto lg:block hidden"
+          v-for="testimoni in testimonies"
+          :key="testimoni.id"
         >
           <p
             class="text-gray-700 italic font-semibold mb-4 text-center leading-relaxed"
           >
-            "Melalui platform ini, saya menemukan komunitas yang sejalan dengan
-            semangat saya untuk mengajar. Kini, saya bisa berkontribusi nyata
-            untuk pendidikan."
+            {{ testimoni }}
           </p>
           <hr class="border-t-2 border-primary mb-6" />
           <div class="flex items-center">
@@ -296,67 +301,15 @@
             />
             <div>
               <h4 class="text-gray-900 font-semibold">
-                Taufan Hidayatul Akbar
+                {{ testimoni }}
               </h4>
-              <p class="text-sm text-gray-500">CO Founder & CEO Alope</p>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="border border-gray-300 rounded-lg shadow-lg p-6 max-w-md mx-auto md:block hidden"
-        >
-          <p
-            class="text-gray-700 italic font-semibold mb-4 text-center leading-relaxed"
-          >
-            "Melalui platform ini, saya menemukan komunitas yang sejalan dengan
-            semangat saya untuk mengajar. Kini, saya bisa berkontribusi nyata
-            untuk pendidikan."
-          </p>
-          <hr class="border-t-2 border-primary mb-6" />
-          <div class="flex items-center">
-            <img
-              src="./../assets/image/topan.png"
-              alt="Profile"
-              class="w-16 h-16 rounded-full mr-4"
-            />
-            <div>
-              <h4 class="text-gray-900 font-semibold">
-                Taufan Hidayatul Akbar
-              </h4>
-              <p class="text-sm text-gray-500">CO Founder & CEO Alope</p>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="border border-gray-300 rounded-lg shadow-lg p-6 max-w-md mx-auto"
-        >
-          <p
-            class="text-gray-700 italic font-semibold mb-4 text-center leading-relaxed"
-          >
-            "Melalui platform ini, saya menemukan komunitas yang sejalan dengan
-            semangat saya untuk mengajar. Kini, saya bisa berkontribusi nyata
-            untuk pendidikan."
-          </p>
-          <hr class="border-t-2 border-primary mb-6" />
-          <div class="flex items-center">
-            <img
-              src="./../assets/image/topan.png"
-              alt="Profile"
-              class="w-16 h-16 rounded-full mr-4"
-            />
-            <div>
-              <h4 class="text-gray-900 font-semibold">
-                Taufan Hidayatul Akbar
-              </h4>
-              <p class="text-sm text-gray-500">CO Founder & CEO Alope</p>
+              <p class="text-sm text-gray-500">{{ testimoni.position }}</p>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="flex justify-center items-center space-x-3 mt-8">
+      <!-- <div class="flex justify-center items-center space-x-3 mt-8">
         <button class="bg-[#FFAC00] text-white px-4 py-2 rounded-md">
           <i class="fa-solid fa-chevron-left"></i>
         </button>
@@ -376,7 +329,7 @@
         >
           <i class="fa-solid fa-chevron-right"></i>
         </button>
-      </div>
+      </div> -->
     </div>
   </section>
   <!-- end testimoni -->
@@ -516,6 +469,9 @@ export default {
 
       isLoadingGetDonasions: false,
       donasions: [],
+
+      isLoadingGetTestimoni: false,
+      testimonies: [],
     };
   },
   methods: {
@@ -526,7 +482,7 @@ export default {
     getDataVolunteers() {
       this.isLoadingGetVolunteers = true;
       axios
-        .get("http://127.0.0.1:8000/api/user/volunteer")
+        .get("https://alope.id/api/user/volunteerAPI?limit=3")
         .then((response) => {
           if (response) {
             this.isLoadingGetVolunteers = false;
@@ -541,7 +497,7 @@ export default {
     getDataDonsasions() {
       this.isLoadingGetDonasions = true;
       axios
-        .get("http://127.0.0.1:8000/api/user/donation")
+        .get("https://alope.id/api/user/donationAPI?limit=3")
         .then((response) => {
           if (response) {
             this.isLoadingGetDonasions = false;
@@ -550,6 +506,22 @@ export default {
         })
         .catch((error) => {
           this.isLoadingGetDonasions = false;
+          console.log("Server error:", error);
+        });
+    },
+    getDataTestimoni() {
+      this.isLoadingGetTestimoni = true;
+      axios
+        .get("https://alope.id/api/user/testimonialAPI")
+        .then((response) => {
+          if (response) {
+            this.isLoadingGetTestimoni = false;
+            this.testimonies = response.data.data;
+            console.log(this.testimonies);
+          }
+        })
+        .catch((error) => {
+          this.isLoadingGetTestimoni = false;
           console.log("Server error:", error);
         });
     },
@@ -573,7 +545,7 @@ export default {
   mounted() {
     this.getDataVolunteers();
     this.getDataDonsasions();
-    // this.getDataVolunteers();
+    this.getDataTestimoni();
   },
 };
 </script>
