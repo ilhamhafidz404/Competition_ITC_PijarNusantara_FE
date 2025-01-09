@@ -279,29 +279,26 @@
         pendidikan Nusantara."
       </p>
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div>
-          {{ testimonies [0] }}
-        </div>
         <div
-          class="border border-gray-300 rounded-lg shadow-lg p-6 max-w-md mx-auto lg:block hidden"
+          class="border border-gray-300 rounded-lg shadow-lg p-6 max-w-md mx-auto"
           v-for="testimoni in testimonies"
           :key="testimoni.id"
         >
           <p
             class="text-gray-700 italic font-semibold mb-4 text-center leading-relaxed"
           >
-            {{ testimoni }}
+            {{ testimoni.content }}
           </p>
           <hr class="border-t-2 border-primary mb-6" />
           <div class="flex items-center">
             <img
-              src="./../assets/image/topan.png"
+              :src="'https://alope.id/storage/' + testimoni.photo_url"
               alt="Profile"
               class="w-16 h-16 rounded-full mr-4"
             />
             <div>
               <h4 class="text-gray-900 font-semibold">
-                {{ testimoni }}
+                {{ testimoni.name }}
               </h4>
               <p class="text-sm text-gray-500">{{ testimoni.position }}</p>
             </div>
@@ -512,7 +509,7 @@ export default {
     getDataTestimoni() {
       this.isLoadingGetTestimoni = true;
       axios
-        .get("https://alope.id/api/user/testimonialAPI")
+        .get("https://alope.id/api/user/testimonialAPI?limit=3")
         .then((response) => {
           if (response) {
             this.isLoadingGetTestimoni = false;
